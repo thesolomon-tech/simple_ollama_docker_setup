@@ -1,4 +1,4 @@
-# Simple Docker Setup
+# Simple Docker Setup For Ollama and Open WebUI
 
 A simple Docker Compose that runs Ollama and Open WebUI ( a front end interface like Chatgpt for Ollama) on the CPU.
 
