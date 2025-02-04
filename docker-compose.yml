@@ -8,10 +8,12 @@ services:
       - ollama:/root/.ollama
     ports:
       - "127.0.0.1:11434:11434"
-    # deploy:
-    #   resources:
-    #     limits:
-    #       memory: "12G"
+    networks:
+      - AI-bridge
+      # deploy:
+      #   resources:
+      #     limits:
+      #       memory: "12G"
 
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
@@ -24,7 +26,12 @@ services:
       - OLLAMA_BASE_URL=http://ollama:11434
     depends_on:
       - ollama
+    networks: 
+     - AI-bridge
 
 volumes:
   ollama:
   open-webui:
+networks:
+  AI-bridge:
+    name: AI-bridge

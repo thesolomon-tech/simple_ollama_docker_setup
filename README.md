@@ -13,3 +13,6 @@ Also, to install a model into ollama, run `docker exec ollama -it`, which will a
 
 > [!TIP]
 >  If you want Ollama to run on your GPU further setup is required. Refer to the official Docker page: https://hub.docker.com/r/ollama/ollama
+
+> [!WARNING]
+> There is network defined that may conflict with existing Docker networks: 'AI-bridge'
